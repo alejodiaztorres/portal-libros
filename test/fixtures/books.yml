@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  author: MyString
+  /Users/alejandro/Desktop/Desafio latam G-26/Portal-libros: MyString
+
+two:
+  name: MyString
+  author: MyString
+  /Users/alejandro/Desktop/Desafio latam G-26/Portal-libros: MyString
