@@ -1,10 +1,11 @@
 class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /purchases
   # GET /purchases.json
   def index
-    @purchases = Purchase.all
+    @purchases = Purchase.where(user: current_user.id, status: 'reservado')
   end
 
   # GET /purchases/1
@@ -56,6 +57,7 @@ class PurchasesController < ApplicationController
   def destroy
     @purchase.destroy
     respond_to do |format|
+      format.js
       format.html { redirect_to purchases_url, notice: 'Purchase was successfully destroyed.' }
       format.json { head :no_content }
     end

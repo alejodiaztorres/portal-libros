@@ -19,12 +19,12 @@
       <tr>
         <td><%= purchase.quantity %></td>
         <td><%= purchase.status %></td>
-        <td><%= purchase.price %></td>
-        <td><%= purchase.user %></td>
-        <td><%= purchase.book %></td>
+        <td><%= purchase.price.round(1) %></td>
+        <td><%= purchase.user.name %></td>
+        <td><%= purchase.book.name %></td>
         <td><%= link_to 'Show', purchase %></td>
         <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
-        <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', purchase, method: :delete, data: {  remote: true }, class: 'delete'%></td>
       </tr>
     <% end %>
   </tbody>

@@ -17,12 +17,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @purchase.user %>
+  <%= @purchase.user.name %>
 </p>
 
 <p>
   <strong>Book:</strong>
-  <%= @purchase.book %>
+  <%= @purchase.book.name %>
 </p>
 
 <%= link_to 'Edit', edit_purchase_path(@purchase) %> |
