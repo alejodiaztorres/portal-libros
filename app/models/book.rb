@@ -1,4 +1,4 @@
 class Book < ApplicationRecord
-    has_many :purchases
-    has_many :users, through: :purchases
+  has_many :purchase_rentings
+  has_many :users, through: :purchase_rentings
 end

@@ -14,9 +14,9 @@ class BooksTest < ApplicationSystemTestCase
     visit books_url
     click_on "New Book"
 
-    fill_in "/users/alejandro/desktop/desafio latam g-26/portal-libros", with: @book./Users/alejandro/Desktop/Desafio latam G-26/Portal-libros
     fill_in "Author", with: @book.author
-    fill_in "Name", with: @book.name
+    fill_in "Bookname", with: @book.bookname
+    fill_in "Quantity", with: @book.quantity
     click_on "Create Book"
 
     assert_text "Book was successfully created"
@@ -27,9 +27,9 @@ class BooksTest < ApplicationSystemTestCase
     visit books_url
     click_on "Edit", match: :first
 
-    fill_in "/users/alejandro/desktop/desafio latam g-26/portal-libros", with: @book./Users/alejandro/Desktop/Desafio latam G-26/Portal-libros
     fill_in "Author", with: @book.author
-    fill_in "Name", with: @book.name
+    fill_in "Bookname", with: @book.bookname
+    fill_in "Quantity", with: @book.quantity
     click_on "Update Book"
 
     assert_text "Book was successfully updated"

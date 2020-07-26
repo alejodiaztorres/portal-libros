@@ -12,15 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
     <%= form.label :author %>
     <%= form.text_field :author %>
   </div>
 
+  <div class="field">
+    <%= form.label :bookname %>
+    <%= form.text_field :bookname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

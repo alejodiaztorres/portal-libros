@@ -23,4 +23,3 @@ status = ['disponible', 'comprado', 'reservado']
 3.times do
     Purchase.create(quantity: rand(1..4), status: status.sample(), price: rand(1500..5000), user_id: rand(1..10), book_id: rand(1..10))
 end
-
